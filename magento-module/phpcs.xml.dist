@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="Acme_DispatchEstimate">
+    <description>Magento coding standard for the Acme_DispatchEstimate module.</description>
+
+    <file>.</file>
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <arg name="extensions" value="php,phtml,xml"/>
+    <arg value="sp"/>
+
+    <rule ref="Magento2"/>
+</ruleset>

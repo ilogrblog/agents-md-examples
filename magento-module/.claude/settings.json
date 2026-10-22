@@ -1,0 +1,11 @@
+{
+    "permissions": {
+        "deny": [
+            "Read(//**/app/etc/env.php)",
+            "Read(//**/auth.json)",
+            "Read(.env)",
+            "Read(.env.*)",
+            "Edit(vendor/**)"
+        ]
+    }
+}

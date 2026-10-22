@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset name="Acme Reading Time">
+	<description>WordPress Coding Standards for the Acme Reading Time plugin.</description>
+
+	<file>.</file>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<rule ref="WordPress"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="acme-reading-time"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="acme_reading_time"/>
+				<element value="Acme_Reading_Time"/>
+			</property>
+		</properties>
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<!-- PHPUnit discovers tests by class and file name, which WordPress naming rules forbid. -->
+	<rule ref="WordPress.Files.FileName">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+</ruleset>

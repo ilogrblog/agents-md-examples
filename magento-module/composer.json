@@ -1,0 +1,36 @@
+{
+    "name": "acme/module-dispatch-estimate",
+    "description": "Example Magento 2 module used to test an AGENTS.md file.",
+    "type": "magento2-module",
+    "license": "MIT",
+    "require": {
+        "php": "~8.3.0 || ~8.4.0 || ~8.5.0"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^41",
+        "phpunit/phpunit": "^10.5 || ^11.5 || ^12.5"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Acme\\DispatchEstimate\\": ""
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "Test/Unit/_files/"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "lint:fix": "phpcbf",
+        "test": "phpunit"
+    }
+}

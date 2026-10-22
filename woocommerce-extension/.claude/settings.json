@@ -1,0 +1,10 @@
+{
+    "permissions": {
+        "deny": [
+            "Read(//**/wp-config.php)",
+            "Read(.env)",
+            "Read(.env.*)",
+            "Edit(vendor/**)"
+        ]
+    }
+}
